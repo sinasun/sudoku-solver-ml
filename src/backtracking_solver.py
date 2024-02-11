@@ -1,24 +1,22 @@
 import argparse
+from board import Board
 
 output_file = ""
 
-def save_solution_to_csv(filename, board):
+def find_empty_location(board: Board):
     pass
 
-def find_empty_location(board):
+def is_valid(board: Board, row, col, num):
     pass
 
-def is_valid(board, row, col, num):
-    pass
-
-def backtrack(board):
+def backtrack(board: Board):
     return False, board
 
-def solve_sudoku(board, output_file):
-    solution = backtrack(board)
-    save_solution_to_csv(output_file, board)
+def solve_sudoku(board: Board, output_file):
+    solved, solution = backtrack(board)
+    if solved: solution.append_to_file(output_file)
 
-def read_boards(filename, output_file):
+def read_boards(filename: str, output_file):
     # TODO: read from file
     boards = {}
     for board in boards:

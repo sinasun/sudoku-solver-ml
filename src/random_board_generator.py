@@ -1,14 +1,9 @@
 import argparse
-
-def save_board_to_csv(filename, board):
-    pass
-
-def check_board_validation(board):
-    pass
+from board import Board
 
 def generate_board():
     # TODO: generate board
-    board = {}
+    board = Board()
     return board
 
 def main():
@@ -24,8 +19,8 @@ def main():
 
     while generated <= total_generates:
         board = generate_board()
-        if check_board_validation(board):
-            save_board_to_csv(save_file, board)
+        if board.is_valid():
+            board.append_to_file(save_file)
             generated += 1
 
 if __name__ == "__main__":
