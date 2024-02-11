@@ -25,10 +25,10 @@ def read_boards(filename, output_file):
         solve_sudoku(board, output_file)
 
 def main():
-    parser = argparse.ArgumentParser(prog="BacktrackSolver", description="Sudoku Solver using Backtracking algorithm", epilog="python3 backtracking_solver.py -i data/boards.csv -o data/solutions.csv")
+    parser = argparse.ArgumentParser(prog="BacktrackSolver", description="Sudoku Solver using Backtracking algorithm", epilog="python3 backtracking_solver.py -i ../data/boards.csv -o ../data/solutions.csv")
 
-    parser.add_argument('-i', '--input', default="data/boards.csv", help="Input file of boards")
-    parser.add_argument('-o', '--output', default="data/solutions.csv", help="Output file for saving solutions")
+    parser.add_argument('-i', '--input', default="../data/boards.csv", help="Input file of boards")
+    parser.add_argument('-o', '--output', default="../data/solutions.csv", help="Output file for saving solutions")
 
     args = parser.parse_args()
     input_file = args.input

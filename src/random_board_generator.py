@@ -12,10 +12,10 @@ def generate_board():
     return board
 
 def main():
-    parser = argparse.ArgumentParser(prog="RandomBoardGenerator", description="Random Sudoku Board Generator", epilog="python3 random_board_generator.py -n 1000 -o data/boards.csv")
+    parser = argparse.ArgumentParser(prog="RandomBoardGenerator", description="Random Sudoku Board Generator", epilog="python3 random_board_generator.py -n 1000 -o ../data/boards.csv")
 
     parser.add_argument('-n', '--number', type=int, default=1, help="Total number of boards to generate")
-    parser.add_argument('-o', '--output', default="data/boards.csv", help="Output file to save generated boards")
+    parser.add_argument('-o', '--output', default="../data/boards.csv", help="Output file to save generated boards")
 
     args = parser.parse_args()
     total_generates = args.number
